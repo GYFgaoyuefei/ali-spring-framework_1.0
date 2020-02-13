@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Admin" />
+        <module name="auth-service-protocol" />
+        <module name="AuthService" />
+        <module name="Gateway" />
+        <module name="Logger" />
+        <module name="picture-service-protocol" />
+        <module name="PictureServer" />
+        <module name="System" />
+        <module name="system-service-protocol" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Admin" target="1.8" />
+      <module name="ali-rockermq-producer" target="1.8" />
+      <module name="aliframework" target="1.8" />
+      <module name="aligateway" target="1.8" />
+      <module name="auth-service-protocol" target="1.8" />
+      <module name="AuthService" target="1.8" />
+      <module name="framework" target="1.8" />
+      <module name="framework-protocol" target="1.8" />
+      <module name="Gateway" target="1.8" />
+      <module name="Logger" target="1.8" />
+      <module name="nacos-consumer" target="1.8" />
+      <module name="nacos-provider" target="1.8" />
+      <module name="picture-service-protocol" target="1.8" />
+      <module name="PictureServer" target="1.8" />
+      <module name="Registry" target="1.8" />
+      <module name="System" target="1.8" />
+      <module name="system-service-protocol" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

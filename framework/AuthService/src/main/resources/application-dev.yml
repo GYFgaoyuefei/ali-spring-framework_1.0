@@ -1,0 +1,78 @@
+spring:
+  application:
+    name: AuthService
+server:
+  servlet:
+    context-path: /AuthService
+custom:
+  app:
+    token:
+      timeout: 86400
+  nosql:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+    rabbitmq:
+      addresses: 192.168.5.1:5672
+      port: 5672
+      username: mnet
+      password: mnet
+  db:
+    url: jdbc:mysql://192.168.5.1:3306/mnet?useUnicode=true&characterEncoding=UTF-8
+    username: mnet_business
+    password: mnet@123
+    driver-class-name: com.mysql.jdbc.Driver
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+  db1:
+    url: jdbc:mysql://192.168.5.1:3306/mnet?useUnicode=true&characterEncoding=UTF-8
+    username: mnet_business
+    password: mnet@123
+    driver-class-name: com.mysql.jdbc.Driver
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+  oauth:
+    ip: 172.20.10.11:9710
+    clientId: test
+    clientSecret: 123456
+  #文件上传配置，保存的路径
+  upload:
+    #文件保存的路径(服务器主机删的绝对路径，如若没有请新建)
+    absolute-path: /home/mnet/montnets/images     
+
+eurekaserver:
+  ip: 172.20.10.11
+  port: 9709
+#eureka:
+#  client:
+#    register-with-eureka: false
+#    fetch-registry: false
+
+logging:
+  level:
+    com.suoju.montnets.common.dao:  DEBUG
+
+token:
+  expire:
+    seconds: 86400
+
+swagger:
+  enable: true
+
+exclude:
+  check:
+    token:  /loginservice/**,/error/**,/images/**,/webjars/**,/**/doc.html,/**/swagger-resources,/v2/**
+
+#数据库备份
+databasecom:
+  ip: 192.168.5.1
+  user: mnet
+  password: ENC(RMx5+VSDmn6fcprDUX6ygFHpw9SLfSH2)
+  databaseName: mnetbak
+  savePath: /home/mnet/mysqlbak
+
+jasypt:
+  encryptor:
+    password: LEiSHEnK750
+
+datasource:
+  backupcmd: /home/mnet/mariadb/bin/mysqldump --defaults-file=/home/mnet/mariadb/my.cnf -h192.168.1.232 -umnet_business -p'mnet@123'
+  restorecmd: /home/mnet/mariadb/bin/mysql --defaults-file=/home/mnet/mariadb/my.cnf -h192.168.1.232 -umnet_business -p'mnet@123'
